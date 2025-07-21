@@ -1,22 +1,30 @@
-const form = document.querySelector("#form-contacto");
-const status = document.querySelector("#form-status");
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbyKbIOKm-OjHHEOUzEDINCrHHSSiy739att-_5C3CcVln6qpKiVOaQFfbvfeo8XmhIl/exec"; // <-- Pega aquí tu URL del Web App
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const formData = new FormData(form);
+      const email = document.getElementById("email").value;
+      const data = new FormData();
+      data.append("email", email);
 
-  fetch(scriptURL, {
-    method: "POST",
-    body: formData,
-  })
-    .then(response => {
-      status.textContent = "¡Gracias por tu contacto!";
-      form.reset();
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      status.textContent = "Hubo un error. Intenta más tarde.";
+      fetch("https://script.google.com/macros/s/AKfycbyAIzcr1OPe9itvP3yEwdKaLWi_ho8Lycw6j4sUllfrhqn7Exw_NK-08RF3dX3aQRAt/exec", {
+        method: "POST",
+        body: data,
+      })
+        .then((response) => {
+          if (response.ok) {
+            alert("Gracias por tu interés. Te contactaremos pronto.");
+            form.reset();
+          } else {
+            alert("Ocurrió un error. Intenta de nuevo más tarde.");
+          }
+        })
+        .catch(() => {
+          alert("Ocurrió un error. Intenta de nuevo más tarde.");
+        });
     });
+  }
 });
+
