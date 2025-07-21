@@ -63,10 +63,3 @@ place-items: center;
 .descargas a:hover {
   background: #004999;
 }
-
-/* Estilos para el video responsivo */
-.video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
