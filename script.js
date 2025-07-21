@@ -1,7 +1,7 @@
 const form = document.querySelector("#form-contacto");
 const status = document.querySelector("#form-status");
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbwYBH6lIyNEkI-Yb24ESddpF__EJvukK4jFM9VQefAwj6rSIsm3gMUo0PEzvMx3wyNi/exec"; // <-- Pega aquí tu URL del Web App
+const scriptURL = "https://script.google.com/macros/s/AKfycbyKbIOKm-OjHHEOUzEDINCrHHSSiy739att-_5C3CcVln6qpKiVOaQFfbvfeo8XmhIl/exec"; // <-- Pega aquí tu URL del Web App
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
