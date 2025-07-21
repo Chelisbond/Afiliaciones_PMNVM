@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
         .then((response) => {
           if (response.ok) {
-            alert("Gracias por tu interés. Te contactaremos pronto.");
+            alert("No olvides que ¡Juntos somos más fuertes! Gracias por tu interés. Te contactaremos pronto.");
             form.reset();
           } else {
             alert("Ocurrió un error. Intenta de nuevo más tarde.");
