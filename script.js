@@ -9,7 +9,7 @@
       const data = new FormData();
       data.append("email", email);
 
-      fetch("https://script.google.com/macros/s/AKfycbwYBH6lIyNEkI-Yb24ESddpF__EJvukK4jFM9VQefAwj6rSIsm3gMUo0PEzvMx3wyNi/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbwjEjgu56mrH-ll1yk--h8eZVD_ubr5gNO_OwOa4ZqluNCkZUwjqIOey-CD0T6LP2SM/exec", {
         method: "POST",
         body: data,
       })
