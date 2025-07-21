@@ -46,6 +46,8 @@ li {
   padding: 1rem;
   margin-top: 2rem;
   text-align: left;
+  max-width: 100%;
+place-items: center;
 }
 
 .descargas a {
